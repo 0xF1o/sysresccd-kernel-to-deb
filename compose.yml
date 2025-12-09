@@ -1,0 +1,15 @@
+services:
+  arch:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+    privileged: true
+    volumes:
+      - .:/pwd
+  deb:
+    build:
+      context: .
+      dockerfile: deb.Dockerfile
+    privileged: true
+    volumes:
+      - .:/pwd
